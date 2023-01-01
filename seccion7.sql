@@ -149,4 +149,10 @@ select ciudad, sexo, count(*) from visitantes group by ciudad, sexo;
 select ciudad, count(*) from visitantes where ciudad <> 'Cordoba' group by ciudad;
 select ciudad, count(*) from visitantes group by ciudad order by ciudad desc;
 
+-- registros duplicados distinct
+select * from producto;
+select distinct proveedor from producto;
+select distinct proveedor from producto order by proveedor asc;
+
+
 
