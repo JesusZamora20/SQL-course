@@ -1,8 +1,8 @@
--- mostrar las bases de datos
+# mostrar las bases de datos
 show databases;
 
--- Eliminar base de datos
+# Eliminar base de datos
 drop database curso;
 
--- crear una base de datos
+# crear una base de datos
 create database curso;

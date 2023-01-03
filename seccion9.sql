@@ -17,7 +17,7 @@ select * from productos;
 alter table productos add precio int;
 alter table productos add cantidad smallint unsigned not null;
 
-#3 eliminar un campo 
+# eliminar un campo 
 alter table productos drop precio;
 alter table productos drop precio, drop cantidad;
 

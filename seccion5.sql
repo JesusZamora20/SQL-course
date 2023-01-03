@@ -1,5 +1,5 @@
--- eliminar la base de datos ya existente
--- drop database if exists curso_sql;
+# eliminar la base de datos ya existente
+# drop database if exists curso_sql;
 
 #show databases;
 
@@ -28,5 +28,5 @@ values(null,'iPhone 11','Apple Iphone 11 de 256gb',126.65);
 insert into producto
 values(null,'iPad pro','Apple iPad pro de 10 pulgadas',345.65);
 
--- borrar todos los registros en una tabla
+# borrar todos los registros en una tabla
 truncate table producto;

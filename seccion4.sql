@@ -6,7 +6,7 @@ telefono varchar(15),
 edad int(5)
 );
 
--- insertando datos
+# insertando datos
 insert into alumnos(nombre,apellido,direccion,telefono,edad)
 values ('Jesus','Bermudez','Calle 69b','1203981',21);
 
@@ -20,26 +20,26 @@ values ('Raul','Cortes','Calle 36','203948',40);
 insert into alumnos(nombre,telefono,edad)
 values ('Juana','09234865',34);
 
--- mostrar datos
+# mostrar datos
 select * from alumnos;
 select nombre, direccion, edad from alumnos;
 
--- recuperar datos con where
+# recuperar datos con where
 select * from alumnos where nombre = 'Loida';
 
--- operadores relacionales
--- = igual    <> distinto  >  <   >=   <=
+# operadores relacionales
+# = igual    <> distinto  >  <   >=   <=
 
 select * from alumnos where nombre = 'Carlos';
 select * from alumnos where nombre <> 'Carlos';
 select * from alumnos where edad > 30;
 select nombre, apellido, edad from alumnos where edad < 30;
 
--- borrar registros
+# borrar registros
 delete from alumnos;
 delete from alumnos where nombre = 'Raul';
 
--- actualizar registros
+# actualizar registros
 
 update alumnos set edad = 34 where nombre = 'Loida';
 update alumnos set apellido = 'Sanchez', telefono = 8723612

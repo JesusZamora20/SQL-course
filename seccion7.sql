@@ -24,11 +24,11 @@ drop table producto;
 
 delete from producto where id=1;
 
--- columnas calculadas
+# columnas calculadas
 select nombre, precio, cantidad, precio*cantidad from producto;
 select nombre, precio, precio * 0.1,precio-(precio*0.1) from producto;
 
--- funciones de cadenas
+# funciones de cadenas
 
 select concat('Hola ', 'Como estas?');
 select concat_ws('-','Juancho','arevalo');
@@ -50,7 +50,7 @@ select concat_ws('/ ', nombre, precio) from producto;
 select left(nombre, 5) from producto;
 select lower(nombre), upper(descripcion) from producto;
 
--- funciones matematicas
+# funciones matematicas
 select ceiling(12.4);
 select ceiling(precio) from producto;
 select ceiling(precio), floor(precio) from producto;
@@ -58,12 +58,12 @@ select mod(10,3);
 select power(2,3);
 select round(20.4);
 
--- clausula order by
+# clausula order by
 
 select nombre, descripcion, precio, cantidad from producto order by nombre;
 select nombre, precio, cantidad from producto order by nombre desc;
 
--- operadores logicos
+# operadores logicos
 and 
 or
 xor
@@ -72,7 +72,7 @@ not
 select * from producto where (proveedor = 'HP') and (precio <= 200);
 select * from producto where not (proveedor = 'Logitech');
 
--- operadores relacionales between - in
+# operadores relacionales between - in
 
 select * from producto where precio >= 100 and precio <= 160;
 select * from producto where precio between 100 and 160;
@@ -80,12 +80,12 @@ select * from producto where precio between 100 and 160;
 select * from producto where proveedor = 'HP' or descripcion = 'Las mejores laptop';
 select * from producto where proveedor in('HP','Las mejores laptop');
 
--- patron de busqueda LIKE y NOT LIKE
+# patron de busqueda LIKE y NOT LIKE
 
 select * from producto where descripcion like '%laptop%';
 select * from producto where descripcion not like '%laptop%';
 
--- patron de busqueda regexp - not regexp
+# patron de busqueda regexp - not regexp
 select * from producto where proveedor regexp 'logi';
 select * from producto where proveedor regexp '[p]';
 select * from producto where proveedor regexp '[a-d]';
@@ -93,12 +93,12 @@ select * from producto where proveedor regexp '^D';
 select * from producto where proveedor regexp 'o.i';
 select * from producto where nombre regexp 'a.*a';
 
--- funcion count
+# funcion count
 select * from producto;
 select count(*) from producto;
 select count(*) from producto where proveedor = 'HP';
 
--- funciones de agrupamiento
+# funciones de agrupamiento
 select sum(cantidad) from producto;
 select sum(cantidad) from producto where proveedor = 'HP';
 select max(precio) from producto;
@@ -106,7 +106,7 @@ select min(precio) from producto;
 select min(precio) from producto where nombre regexp 'laptop';
 select avg(precio) from producto where nombre regexp 'laptop';
 
--- funcion de agrupamiento group by
+# funcion de agrupamiento group by
 create table visitantes(
   nombre varchar(30),
   edad tinyint unsigned,
@@ -149,7 +149,7 @@ select ciudad, sexo, count(*) from visitantes group by ciudad, sexo;
 select ciudad, count(*) from visitantes where ciudad <> 'Cordoba' group by ciudad;
 select ciudad, count(*) from visitantes group by ciudad order by ciudad desc;
 
--- registros duplicados distinct
+# registros duplicados distinct
 select * from producto;
 select distinct proveedor from producto;
 select distinct proveedor from producto order by proveedor asc;

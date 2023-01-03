@@ -1,18 +1,18 @@
--- tipos de datos
+# tipos de datos
 
--- enteros
+# enteros
 tinyint -127 128 unsigned;
 smallint
 mediumint 
 int o integer
 bigint
 
--- decimales
+# decimales
 precio float(6.25);
 precio2 double(4.53);
 decimal
 
--- cadenas
+# cadenas
 
 char 255 caracteres max
 varchar	longitud desconocida, max long de 65.535 caracteres
@@ -23,7 +23,7 @@ enum, permite clasificar con valores de una lista definida
 set, como un enum pero hasta 64 valores y permite elegir varias opciones
 
 
--- fecha 
+# fecha 
 
 date en formato AAAA-MM-DD
 datetime en formato AAAA-MM-DD HH-MM-SS
@@ -33,7 +33,7 @@ on update current_timestamp actualizar valores automaticamente
 year
 
 
--- atributo default
+# atributo default
 
 use curso_sql;
 
