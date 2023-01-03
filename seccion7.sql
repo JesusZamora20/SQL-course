@@ -155,4 +155,3 @@ select distinct proveedor from producto;
 select distinct proveedor from producto order by proveedor asc;
 
 
-
