@@ -17,7 +17,7 @@ select * from productos;
 alter table productos add precio int;
 alter table productos add cantidad smallint unsigned not null;
 
-# eliminar un campo 
+#3 eliminar un campo 
 alter table productos drop precio;
 alter table productos drop precio, drop cantidad;
 
@@ -41,6 +41,16 @@ alter table productos drop primary key;
 alter table productos add index i_precio (precio);
 show index from productos;
 alter table productos drop index i_precio;
+
+#renombrar una tabla
+show tables;
+alter table productos rename cliente;
+rename table cliente to productos;
+
+# intercambiar nombres de dos tablas
+rename table productos to auxiliar,
+clientes to productos,
+auxiliar to clientes;
 
 
 
