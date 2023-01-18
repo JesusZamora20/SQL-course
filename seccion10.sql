@@ -237,6 +237,7 @@ primary key(id),
 unique index (nombre)
 );
 
+select * from productos;
 select * from proveedor;
 
 insert into proveedor (nombre) values('Lenovo');
@@ -261,8 +262,14 @@ values('Volante Gamer', 'El mejor volante para jugar', 2, 800, 5);
 insert into productos(nombre, descripcion, proveedorid, precio, cantidad) 
 values('Disco duro', 'Obten mas capacidad', 3, 70, 80);
 
+#borrar productos consultando otras tablas (Delete-Join)
+delete productos
+from productos
+join proveedor
+on productos.proveedorid = proveedor.id
+where proveedor.nombre = 'HP';
 
-
+select * from productos;
 
 
 
