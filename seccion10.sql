@@ -148,7 +148,7 @@ drop table if exists libros, socios, prestamos;
  on pre.codigolibro = lib.codigo;
  
  #funcion de control if y case con tablas
- select pro.nombre,
+ select pro.nombre, 
  if(count(p.proveedorid) > 0, 'Si', 'No') as 'hay'
  from proveedor as pro
  left join productos as p

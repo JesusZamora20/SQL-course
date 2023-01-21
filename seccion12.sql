@@ -99,7 +99,7 @@ drop table if exists profesores;
  join profesores as p on a.codigoprofesor=p.codigo
  where nota>=7;
  
- select * from vista_nota_alumnos_aprodabos;
+ select * from vista_nota_alumnx	os_aprodabos;
  
 #insertar un alumno
  insert into vista_nota_alumnos_aprodabos(documento, nombrealumno, nota, codigoprofesor)
